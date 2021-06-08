@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>一覧</head>
+    <body>
+        {% if Health_list %}
+        <ul>
+        {% for health in Health_list %}
+            <li>{{ health.staff_no }}&nbsp;{{ health.reported }}&nbsp;{{ health.degrees }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Health are available.</p>
+    {% endif %}
+    </body>
+</html>
